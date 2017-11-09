@@ -25,16 +25,15 @@ function constrainToBoxComposer(config) {
       modifications[xKey] = outerX
     }
 
-    if (innerBox[yKey] + innerBox[heightKey] > outerY + outerBox[heightKey] - innerBox[heightKey]) {
+    if (innerBox[yKey] + innerBox[heightKey] > outerY + outerBox[heightKey]) {
       if (!modifications) modifications = {}
       modifications[yKey] = outerY + outerBox[heightKey] - innerBox[heightKey]
     }
 
-    if (innerBox[xKey] + innerBox[widthKey] > outerX + outerBox[widthKey] - innerBox[widthKey]) {
+    if (innerBox[xKey] + innerBox[widthKey] > outerX + outerBox[widthKey]) {
       if (!modifications) modifications = {}
       modifications[xKey] = outerX + outerBox[widthKey] - innerBox[widthKey]
     }
-
 
 
     if (modifications) {
@@ -47,14 +46,6 @@ function constrainToBoxComposer(config) {
 }
 
 const constrainToBox = constrainToBoxComposer({})
-
-// const constrainToBox = constrainToBoxComposer({
-//   width: 'width',
-//   height: 'height',
-//   x: 'x',
-//   y: 'y'
-// })
-
 constrainToBox.config = constrainToBoxComposer
 
 module.exports = constrainToBox

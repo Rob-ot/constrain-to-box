@@ -89,6 +89,13 @@ describe('constrain', function() {
     assert.deepEqual(result, {width: 50, height: 50, x: 450, y: 450})
   })
 
+  it('does nothing to box near bottom and right edge', function() {
+    const inner = {width: 50, height: 50, x: 445, y: 445}
+    const outer = {width: 500, height: 500}
+    const result = constrain(outer, inner)
+    assert.equal(result, inner)
+  })
+
 
   it('allows configing custom options for top and left', function() {
     const configedConstrain = constrain.config({

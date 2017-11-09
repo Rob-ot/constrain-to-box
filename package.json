@@ -1,0 +1,24 @@
+{
+  "name": "constrain-to-box",
+  "version": "1.0.0",
+  "description": "Constrain a smaller box inside a larger box",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha .",
+    "dev": "mocha . --watch"
+  },
+  "keywords": [
+    "constrain",
+    "contain",
+    "box",
+    "bound"
+  ],
+  "author": "Rob Middleton",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

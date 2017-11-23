@@ -1,6 +1,6 @@
 {
   "name": "constrain-to-box",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Constrain a smaller box inside a larger box",
   "main": "index.js",
   "scripts": {

@@ -1,19 +1,19 @@
 
-const _ = require('lodash')
+var _ = require('lodash')
 
 function constrainToBoxComposer(config) {
 
-  const xKey = config.x || 'x'
-  const yKey = config.y || 'y'
-  const widthKey = config.width || 'width'
-  const heightKey = config.height || 'height'
+  var xKey = config.x || 'x'
+  var yKey = config.y || 'y'
+  var widthKey = config.width || 'width'
+  var heightKey = config.height || 'height'
 
   return function constrainToBox(outerBox, innerBox) {
 
-    let modifications = null
+    var modifications = null
 
-    const outerX = outerBox[xKey] || 0
-    const outerY = outerBox[yKey] || 0
+    var outerX = outerBox[xKey] || 0
+    var outerY = outerBox[yKey] || 0
 
     if (innerBox[yKey] < outerY) {
       if (!modifications) modifications = {}
@@ -45,7 +45,7 @@ function constrainToBoxComposer(config) {
   }
 }
 
-const constrainToBox = constrainToBoxComposer({})
+var constrainToBox = constrainToBoxComposer({})
 constrainToBox.config = constrainToBoxComposer
 
 module.exports = constrainToBox
